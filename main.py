@@ -1,5 +1,5 @@
-def send_sms(text):
-account_sid ='ACfc44d25ff122584fc5b5679aeaea6de4'
+def send_sms():
+    """ACfc44d25ff122584fc5b5679aeaea6de4"""
  auth_token = 'a2cb8ddb1fe73b4c57758bc3af2105c8'
 client = Client(account_sid, auth_token)
 message = client.messages.create(
