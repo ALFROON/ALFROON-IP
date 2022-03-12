@@ -1,37 +1,10 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ALFROON>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-      )
-print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ALFROON>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-      )
-
-print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ALFROON>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-      )
-print('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<ALFROON>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-      )
-
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-
-    print("HELLO")
-    print("welcom to ALFROON ")
-    import socket
-
-# import sys
-
-    print('Enter your DNS or Target: ')
-    hostname = input()
-    ip = socket.gethostbyname(hostname)
-    print('Host Name Is: ', hostname, '\n' 'Target Ip Is: ', ip)
-print('made py ALFROON'
-      )
+def send_sms(text):
+    account_sid = 'ACfc44d25ff122584fc5b5679aeaea6de4'
+ auth_token = 'a2cb8ddb1fe73b4c57758bc3af2105c8'
+client = Client(account_sid, auth_token)
+message = client.messages.create(
+    from_='your_from_num',
+    body=text,
+    to='your_to_num'
+)
+print(message.sid)
